@@ -5,7 +5,7 @@ int Length = Convert.ToInt32(Console.ReadLine());
 
 //double min = 0;
 
-double[ ] array = new double[Length];
+int[ ] array = new int[Length];
 
 for (int i = 0; i < Length; i++)
 {
