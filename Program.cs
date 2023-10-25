@@ -3,10 +3,25 @@
 Console.WriteLine("Введите размер массива");
 int Length = Convert.ToInt32(Console.ReadLine());
 
-double[] array = new double[Length];
+//double min = 0;
+
+double[ ] array = new double[Length];
 
 for (int i = 0; i < Length; i++)
 {
-    array[i] = new Random().Next(1, 10);
+    double a = new Random().Next(100, 10000);
+    double b = a / 100;
+    array[i] = b;
     Console.Write(array[i] + " ");
 }
+ for (int i = 0; i < (Length - 2); i++)
+ {
+    double max = array[i];
+    if(array[i + 1] > max) max = array[i + 1];
+    if(array[i + 2] > max) max = array[i + 2];
+    i++;
+    Console.WriteLine(" -" + max);
+  
+ }
+    
+
