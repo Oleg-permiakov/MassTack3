@@ -5,7 +5,7 @@ int Length = Convert.ToInt32(Console.ReadLine());
 
 //double min = 0;
 
-int[ ] array = new int[Length];
+double[ ] array = new double[Length];
 
 for (int i = 0; i < Length; i++)
 {
@@ -14,14 +14,22 @@ for (int i = 0; i < Length; i++)
     array[i] = b;
     Console.Write(array[i] + " ");
 }
- for (int i = 0; i < (Length - 2); i++)
+ double max = array[0];
+ for (int i = 0; i < (array.Length - 1); i++)
  {
-    double max = array[i];
-    if(array[i + 1] > max) max = array[i + 1];
-    if(array[i + 2] > max) max = array[i + 2];
-    i++;
-    Console.WriteLine(" -" + max);
-  
+        if(array[i + 1] > max) max = array[i + 1];
+             
  }
-    
+//Console.Write(" -" + max);
+
+double min = array[0];
+ for (int i = 0; i < (array.Length - 1); i++)
+ {
+        if(array[i + 1] < min) min = array[i + 1];
+             
+ }
+//Console.Write(" -" + min);
+ double result = max - min;
+Console.Write(" -" + result);
+
 
